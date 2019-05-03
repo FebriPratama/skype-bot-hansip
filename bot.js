@@ -54,7 +54,7 @@ class MyBot extends ActivityHandler {
                     i++;
                 });
             });
-            await context.sendActivity('User ' + context.activity.from.name + " requesting to "+command + additional);
+            await context.sendActivity('User ' + context.activity.from.name + " requesting to "+command + command_additional);
             // By calling next() you ensure that the next BotHandler is run.
             await next();
         });
