@@ -17,8 +17,10 @@
     },
     "dependencies": {
         "botbuilder": "~4.4.0",
+        "botbuilder-teams": "^0.2.6",
         "dotenv": "^7.0.0",
         "mongodb": "^3.2.3",
+        "redis": "^2.8.0",
         "restify": "~8.2.0"
     },
     "devDependencies": {
