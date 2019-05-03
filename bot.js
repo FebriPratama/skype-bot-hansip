@@ -25,19 +25,25 @@ class MyBot extends ActivityHandler {
 
             var test = "";
             var text_split = context.activity.text.split(" ");
+            var command = "";
+            var command_additional = "";
+
             commands.forEach( x => {
                 var i = 0;
                 text_split.forEach(y=>{
                     if(i==0){
 
                         if(x.value.indexOf(y)){
-
+                            command = x.value;
                             if(x.childs && x.childs.length){   
 
                                 if(text_split[1]){
                                     var text_split_server = text_split[1].split(",");
+                                    if(text_split_server.length){
+                                        command_additional = " on ";
+                                    }
                                     text_split_server.forEach(z=>{
-                                        test = test + "-" + z;
+                                        command_additional = command_additional + " "+z;
                                     });
                                 }
                                 
@@ -48,7 +54,7 @@ class MyBot extends ActivityHandler {
                     i++;
                 });
             });
-            await context.sendActivity('Ok :' + test);
+            await context.sendActivity('User ' + context.activity.from.name + " requesting to "+command + additional);
             // By calling next() you ensure that the next BotHandler is run.
             await next();
         });
