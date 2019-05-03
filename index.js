@@ -4,6 +4,7 @@
 const dotenv = require('dotenv');
 const path = require('path');
 const restify = require('restify');
+const MongoClient = require('mongodb').MongoClient;
 
 // Import required bot services.
 // See https://aka.ms/bot-services to learn more about the different parts of a bot.

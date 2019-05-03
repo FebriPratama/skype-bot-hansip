@@ -18,6 +18,7 @@
     "dependencies": {
         "botbuilder": "~4.4.0",
         "dotenv": "^7.0.0",
+        "mongodb": "^3.2.3",
         "restify": "~8.2.0"
     },
     "devDependencies": {

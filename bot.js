@@ -30,10 +30,10 @@ class MyBot extends ActivityHandler {
                 text_split.forEach(y=>{
                     if(i==0){
 
-                        if(!x.value.indexOf(y)){
+                        if(x.value.indexOf(y)){
 
                             if(x.childs && x.childs.length){   
-                                
+
                                 if(text_split[1]){
                                     var text_split_server = text_split[1].split(",");
                                     text_split_server.forEach(z=>{
